@@ -37,25 +37,35 @@ public class TestChess extends Chess {
         System.out.println(Chess.strToSqi(from));
 		System.out.println("lo que me devuelve ksjbdkasj"+from);
 		  */
-		String s1="", s2="";
-        Scanner in = new Scanner(System.in);
-        System.out.println("Ingrese pisicion de pieza a mover: ");
-        s1 = in.next();
-        System.out.println("Movera la pieza: " + s1 + " a donde.? : ");
-        s2 = in.next();
-        System.out.println(s1 + " "+ s2);
-        //short ss = s1;
-        //Short ss = "Chess."+s1;
-        ;
-        //coorToSqi(0, 2);
-        
-        int from = strToSqi(s1);
-        int to = strToSqi(s2);
-        
-        
-        System.out.println("move: " + from + " to:  "+ to);
-        chessFrame.addMove(from,to,false, "prueba1");
-        
+        String f = "";
+		do{
+			f="";
+			String s1="", s2="";
+	        Scanner in = new Scanner(System.in);
+	        System.out.println("Ingrese posicion de pieza a mover: ");
+	        s1 = in.next();
+	        System.out.println("Moverá la pieza: " + s1 + " a donde.? O.o : ");
+	        s2 = in.next();
+	        System.out.println(s1 + " "+ s2);
+	        //short ss = s1;
+	        //Short ss = "Chess."+s1;
+	        ;
+	        //coorToSqi(0, 2);
+	        
+	        int from = strToSqi(s1);
+	        int to = strToSqi(s2);
+	        
+	        
+	        System.out.println("move: " + from + " to:  "+ to);
+	        chessFrame.addMove(from,to,false, "");
+	        Scanner in1 = new Scanner(System.in);
+	        
+	        System.out.println("Finalizar: (S/n): "); 
+	        f = in1.next();
+	        if(f == "s" ){
+	        }
+		}while(f.length() > 0);
+        System.out.println("salio");
 	}
 
 }
